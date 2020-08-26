@@ -22,23 +22,23 @@ if (count($argv) < 2) {
 }else{
 	switch ($argv[1]) {
 		case 'crypt':
-			echo "Type what you want to encrypt\n";
+			echo "\e[1;35mType what you want to encrypt\e[0m\n";
 			$cryptcontent = readline("> ");
 			echo $cryptcontent . "\n";
-			echo "Type key for encryption\n";
+			echo "\e[1;35mType key for encryption\e[0m\n";
 			$cryptkey = readline("> ");
 			echo $cryptkey;
 			break;
 		case 'decrypt':
-			echo "Type file you want to dencrypt\n";
+			echo "\e[1;35mType file you want to dencrypt\e[0m\n";
 			$cryptcontent = readline("> ");
 			echo $cryptcontent . "\n";
-			echo "Type key for decryption\n";
+			echo "\e[1;35mType key for decryption\e[0m\n";
 			$cryptkey = readline("> ");
 			echo $cryptkey;
 			break;
 		default:
-			echo "Usage:\n  -> php gopi.php crypt\n  -> php gopi.php decrypt";
+			echo "  Usage:\n  -> php gopi.php crypt\n  -> php gopi.php decrypt";
 			break;
 	};
 }
