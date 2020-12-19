@@ -1,2 +1,2 @@
 # GOPI Crypt
-File and Password AES encryption
+File and Password AES encryption using PHP
