@@ -27,9 +27,14 @@ if (count($argv) < 2) {
 				$cryptcontent = readline("> ");
 			}while(empty($cryptcontent));
 			echo $cryptcontent . PHP_EOL;
-			echo "\e[1;35mDefine a key for encryption\e[0m". PHP_EOL;
+			echo "\e[1;35;42mDefine a key for encryption\e[0m". PHP_EOL;
 			$cryptkey = readline("> ");
 			echo $cryptkey;
+			$escrever = fwrite(fopen('passwords.gopi', 'a+'), $cryptcontent.'\n');
+			if($escrever)
+				print "\n\e[0;32;47m--SUCCESS--\e[0m";
+			else
+				print "\n\e[0;31;47m--EROOR--\e[0m";
 			break;
 		case 'decrypt':
 			do{
